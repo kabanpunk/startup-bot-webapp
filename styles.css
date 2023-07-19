@@ -1,6 +1,6 @@
 @font-face {
-   font-family: myFont;
-   src: url(Fedra-Sans-Pro.ttf);
+    font-family: myFont;
+    src: url(Fedra-Sans-Pro.ttf);
 }
 
 body {
@@ -42,4 +42,32 @@ body {
 
 .person-block p {
     text-align: left;
+}
+
+.none {
+    /* Image is not scaled */
+    object-fit: none;
+}
+
+.fill {
+    /* Image is scaled to fill the container. */
+    /* Aspect ratio IS NOT maintained */
+    object-fit: fill;
+}
+
+.cover {
+    /* Image is scaled to fill the container. */
+    /* Aspect ratio IS maintained */
+    object-fit: cover;
+}
+
+.contain {
+    /* Image is scaled to fit within the container. */
+    /* Aspect ratio IS maintained */
+    object-fit: contain;
+}
+
+.scale-down {
+    /* Uses either 'none' or 'contain' to produce the smallest image size */
+    object-fit: scale-down;
 }
