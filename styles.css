@@ -1,0 +1,45 @@
+@font-face {
+   font-family: myFont;
+   src: url(Fedra-Sans-Pro.ttf);
+}
+
+body {
+    font-family: myFont;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.person-block {
+    display: flex;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+}
+
+.person-block img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.text-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.person-block h2 {
+    margin: 0;
+}
+
+.person-block p {
+    text-align: left;
+}
