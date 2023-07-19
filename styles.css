@@ -1,10 +1,11 @@
 @font-face {
-    font-family: myFont;
-    src: url(Fedra-Sans-Pro.ttf);
+   font-family: myFont;
+   src: url(Fedra-Sans-Pro.ttf);
 }
 
 body {
     font-family: myFont;
+    background-color: #f0f0f0; 
 }
 
 .container {
@@ -15,59 +16,57 @@ body {
 
 .person-block {
     display: flex;
+    flex-direction: row; 
     margin: 20px;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 10px;
     width: 90%;
-    max-width: 500px;
+    max-width: 800px;
+    background-color: white; 
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.1); 
+    align-items: center; 
 }
 
 .person-block img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+    width: 300px;
+    height: 400px;
+    border-radius: 30px;
     margin-right: 20px;
+    object-fit: cover; 
+    object-position: center;
 }
 
 .text-block {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center; 
+    max-width: 450px; 
+    margin-top: 20px; /* добавляем отступ сверху */
 }
 
 .person-block h2 {
     margin: 0;
+    margin-bottom: 10px; 
+    color: #333; 
 }
 
 .person-block p {
     text-align: left;
+    color: #666; 
 }
 
-.none {
-    /* Image is not scaled */
-    object-fit: none;
-}
+@media only screen and (max-width: 600px) {
+    .person-block {
+        flex-direction: column;
+    }
 
-.fill {
-    /* Image is scaled to fill the container. */
-    /* Aspect ratio IS NOT maintained */
-    object-fit: fill;
-}
+    .person-block img {
+        width: 100%;
+        height: auto; 
+    }
 
-.cover {
-    /* Image is scaled to fill the container. */
-    /* Aspect ratio IS maintained */
-    object-fit: cover;
-}
-
-.contain {
-    /* Image is scaled to fit within the container. */
-    /* Aspect ratio IS maintained */
-    object-fit: contain;
-}
-
-.scale-down {
-    /* Uses either 'none' or 'contain' to produce the smallest image size */
-    object-fit: scale-down;
+    .text-block {
+        margin-top: 20px; /* уменьшаем отступ для мобильных устройств */
+    }
 }
